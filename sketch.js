@@ -108,5 +108,4 @@ function windowResized() {
     rect_02 = new MyRect(windowWidth/2, windowHeight/2, 450, 175, 50, midG);
     rect_03 = new MyRect(windowWidth/2, windowHeight/2+175, 175, 50, 50, lightG);
     rect_04 = new MyRect(windowWidth/2, windowHeight/2+265, 250, 50, 50, darkG);
-
 }
