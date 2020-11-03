@@ -60,7 +60,7 @@ function draw() {
             rect_03 = new MyRect(windowWidth/2, windowHeight/2+175, 175, 50, 50, lighterG);
             fill(darkG);
             text(wSubmit, windowWidth/2, windowHeight/2+183);
-            if (name == undefined) {
+            if (nameP == undefined) {
                 rect_04.display();
                 fill('white')
                 text(wNull, windowWidth/2, windowHeight/2+270);
