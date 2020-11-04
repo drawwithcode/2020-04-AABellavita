@@ -19,6 +19,7 @@ let rect_01;
 let rect_02;
 let rect_03;
 let nameP;
+let inpName;
 
 function preload() {}
 
@@ -100,9 +101,9 @@ function windowResized() {
     resizeCanvas(windowWidth,windowHeight);
     background(darkG);
 
-    let inpName = createInput('');
-    inpName.input(myInputEvent);
-    inpName.position(windowWidth/2-inpName.width/2,windowHeight/2+10)
+    //let inpName = createInput('');
+    //inpName.input(myInputEvent);
+    //inpName.position(windowWidth/2-inpName.width/2,windowHeight/2+10)
     rect_00 = new MyRect(windowWidth/2, windowHeight/2, 675, 675, 50, 'white');
     rect_01 = new MyRect(windowWidth/2, windowHeight/2-200, 250, 100, 50, darkG);
     rect_02 = new MyRect(windowWidth/2, windowHeight/2, 450, 175, 50, midG);
