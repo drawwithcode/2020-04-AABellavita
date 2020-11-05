@@ -13,6 +13,14 @@ let wSubmit = 'Submit';
 let redRight = false;
 let greenRight = false;
 let blueRight = false;
+let clue1 = false;
+let clue2 = false;
+let clue3 = false;
+let clue4 = false;
+let clue5 = false;
+let clue6 = false;
+let clue7 = false;
+let clue8 = false;
 
 
 function preload() {}
@@ -120,54 +128,70 @@ function mouseClicked() {
 				rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(175,0,0)');
 				text_04 = createDiv("I don't really like red");
 				text_04.class("thirdpar");
-			  	text_04.position(175, windowHeight/2+140);
+			  	text_04.position(175, windowHeight/2+142);
+				clue1 = true;
 			} else {
 				text_04.hide();
 				rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(0,175,0)');
 				text_04 = createDiv("That's right!");
 				text_04.class("thirdpar");
-			  	text_04.position(175, windowHeight/2+140);
+			  	text_04.position(175, windowHeight/2+142);
 				redRight = true;
+				clue2 = true;
 			}
 			if (params.g > 160) {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
 				text_05 = createDiv("Too much green!");
 				text_05.class("thirdpar");
-			  	text_05.position(175, windowHeight/2+193);
+			  	text_05.position(175, windowHeight/2+195);
+				clue3 = true;
+				clue4 = false;
 			} else if (params.g < 140) {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
 				text_05 = createDiv("Too little green...");
 				text_05.class("thirdpar");
-			  	text_05.position(175, windowHeight/2+193);
+			  	text_05.position(175, windowHeight/2+195);
+				clue4 = true;
+				clue3 = false;
 			} else {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(0,175,0)');
 				text_05 = createDiv("You got it!");
 				text_05.class("thirdpar");
-			  	text_05.position(175, windowHeight/2+193);
+			  	text_05.position(175, windowHeight/2+195);
 				greenRight = true;
+				clue5 = true;
+				clue3 = false;
+				clue4 = false;
 			}
 			if (params.b > 210) {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
 				text_06 = createDiv("Maybe that's too much");
 				text_06.class("thirdpar");
-			  	text_06.position(175, windowHeight/2+244);
+			  	text_06.position(175, windowHeight/2+246);
+				clue6 = true;
+				clue7 = false;
 			} else if (params.b < 190) {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
 				text_06 = createDiv("I really like blue!");
 				text_06.class("thirdpar");
-			  	text_06.position(175, windowHeight/2+244);
+			  	text_06.position(175, windowHeight/2+246);
+				clue7 = true;
+				clue6 = false;
 			} else {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(0,175,0)');
 				text_06 = createDiv("Amazing!");
 				text_06.class("thirdpar");
-			  	text_06.position(175, windowHeight/2+244);
+			  	text_06.position(175, windowHeight/2+246);
 				blueRight = true;
+				clue8 = true;
+				clue7 = false;
+				clue6 = false;
 			}
 			if (redRight == true && greenRight == true && blueRight == true) {
 				window.open('index2.html?nome=' + nameP, '_self');
@@ -195,5 +219,33 @@ function windowResized() {
   	text_02.position(0, windowHeight/2-100);
 	text_03.class("secondpar");
   	text_03.position(0, windowHeight/2-70);
+
+	if (clue1 == true && clue2 == false) {
+		rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(175,0,0)');
+		text_04.position(175, windowHeight/2+142);
+	} else if (clue2 == true){
+		rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(0,175,0)');
+		text_04.position(175, windowHeight/2+142);
+	}
+	if (clue3 == true) {
+		rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
+		text_05.position(175, windowHeight/2+195);
+	} else if (clue4 == true) {
+		rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
+		text_05.position(175, windowHeight/2+195);
+	} else if (clue5 == true) {
+		rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(0,175,0)');
+		text_05.position(175, windowHeight/2+195);
+	}
+	if (clue6 == true) {
+		rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
+		text_06.position(175, windowHeight/2+246);
+	} else if (clue7 == true) {
+		rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
+		text_06.position(175, windowHeight/2+246);
+	} else if (clue8 == true) {
+		rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(0,175,0)');
+		text_06.position(175, windowHeight/2+246);
+	}
 
 }
