@@ -1,4 +1,3 @@
-let guessedColor;
 var gui;
 const urlString = window.location.href;
 const url = new URL(urlString);
