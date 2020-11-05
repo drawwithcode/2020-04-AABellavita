@@ -119,13 +119,13 @@ function mouseClicked() {
 				text_04.hide();
 				rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(175,0,0)');
 				text_04 = createDiv("I don't really like red");
-				text_04.class("secondpar");
+				text_04.class("thirdpar");
 			  	text_04.position(175, windowHeight/2+140);
 			} else {
 				text_04.hide();
 				rect_04 = new MyRect(windowWidth/2+175, windowHeight/2+155, 220, 44, 50, 'rgb(0,175,0)');
 				text_04 = createDiv("That's right!");
-				text_04.class("secondpar");
+				text_04.class("thirdpar");
 			  	text_04.position(175, windowHeight/2+140);
 				redRight = true;
 			}
@@ -133,19 +133,19 @@ function mouseClicked() {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
 				text_05 = createDiv("Too much green!");
-				text_05.class("secondpar");
+				text_05.class("thirdpar");
 			  	text_05.position(175, windowHeight/2+193);
 			} else if (params.g < 140) {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(175,0,0)');
 				text_05 = createDiv("Too little green...");
-				text_05.class("secondpar");
+				text_05.class("thirdpar");
 			  	text_05.position(175, windowHeight/2+193);
 			} else {
 				text_05.hide();
 				rect_05 = new MyRect(windowWidth/2+175, windowHeight/2+207, 220, 44, 50, 'rgb(0,175,0)');
 				text_05 = createDiv("You got it!");
-				text_05.class("secondpar");
+				text_05.class("thirdpar");
 			  	text_05.position(175, windowHeight/2+193);
 				greenRight = true;
 			}
@@ -153,19 +153,19 @@ function mouseClicked() {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
 				text_06 = createDiv("Maybe that's too much");
-				text_06.class("secondpar");
+				text_06.class("thirdpar");
 			  	text_06.position(175, windowHeight/2+244);
 			} else if (params.b < 190) {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(175,0,0)');
 				text_06 = createDiv("I really like blue!");
-				text_06.class("secondpar");
+				text_06.class("thirdpar");
 			  	text_06.position(175, windowHeight/2+244);
 			} else {
 				text_06.hide();
 				rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'rgb(0,175,0)');
 				text_06 = createDiv("Amazing!");
-				text_06.class("secondpar");
+				text_06.class("thirdpar");
 			  	text_06.position(175, windowHeight/2+244);
 				blueRight = true;
 			}
@@ -190,5 +190,10 @@ function windowResized() {
 	rect_06 = new MyRect(windowWidth/2+175, windowHeight/2+259, 220, 44, 50, 'white');
 
 	gui.setPosition(windowWidth/2-275, windowHeight/2+100);
+	text_01.position(0, windowHeight/2-220);
+	text_02.class("secondpar");
+  	text_02.position(0, windowHeight/2-100);
+	text_03.class("secondpar");
+  	text_03.position(0, windowHeight/2-70);
 
 }
