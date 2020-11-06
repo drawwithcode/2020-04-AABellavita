@@ -40,8 +40,11 @@ function setup() {
 	gui.addObject(params);
 	gui.setPosition(windowWidth/2-275, windowHeight/2+100);
 	text_01 = createDiv("Hi, " + nameP);
+	text_01.class("mainpar");
 	text_02 = createDiv("Try to guess my favorite color");
+	text_02.class("secondpar");
 	text_03 = createDiv("You have " + attempts + " attempts left");
+	text_03.class("secondpar");
 	text_04 = createDiv("");
 	text_05 = createDiv("");
 	text_06 = createDiv("");
@@ -67,11 +70,8 @@ function draw() {
 	fill(0,0,params.b);
 	ellipse(windowWidth/2,windowHeight/2+260,35);
 
-  	text_01.class("mainpar");
   	text_01.position(0, windowHeight/2-220);
-	text_02.class("secondpar");
   	text_02.position(0, windowHeight/2-100);
-	text_03.class("secondpar");
   	text_03.position(0, windowHeight/2-70);
 	fill('white');
     textSize(30);
