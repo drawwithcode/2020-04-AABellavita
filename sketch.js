@@ -40,7 +40,6 @@ function setup() {
 }
 
 function draw() {
-    noStroke();
     rect_00.display();
     rect_01.display();
     rect_02.display();
@@ -103,9 +102,10 @@ function windowResized() {
     background(color(175,175,175));
 
     //myInput();
+    //inpName.hide();
     let inpName = createInput('');
     inpName.input(myInputEvent);
-    inpName.position(windowWidth/2-inpName.width/2,windowHeight/2+10);  
+    inpName.position(windowWidth/2-inpName.width/2,windowHeight/2+10);
 
     rect_00 = new MyRect(windowWidth/2, windowHeight/2, 675, 675, 50, 'white');
     rect_01 = new MyRect(windowWidth/2, windowHeight/2-200, 250, 100, 50, darkO);
