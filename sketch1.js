@@ -54,7 +54,7 @@ function setup() {
 function draw() {
 	background(params.r, params.g, params.b);
 	noStroke();
-    rect_00.display();
+   rect_00.display();
 	rect_01.display();
 	rect_02.display();
 	rect_03.display();
@@ -119,8 +119,10 @@ function mouseClicked() {
 		if (attempts >= 1) {
 			if (attempts == 1) {
 				text_03 = createDiv("You have " + attempts + " attempt left");
+				text_03.class("secondpar");
 			} else {
 				text_03 = createDiv("You have " + attempts + " attempts left");
+				text_03.class("secondpar");
 			}
 			if (params.r > 20) {
 				text_04.hide();
